@@ -4,9 +4,9 @@
 ## Général
 Premier CTF pour moi, bonne expérience, et pleins de nouveaux sujets pour moi : rétro, buffer overflow, sécurité matérielle et algo quantique.
 ### Score et placement :
-![Image](https://github.com/loquils/CTFs-WriteUps/main/404CTF/_Images/Général/position.png?ref_type=heads)
+![Image](https://github.com/loquils/CTFs-WriteUps/blob/main/404CTF/_Images/Général/position.png?ref_type=heads)
 ### Evolution au cours du temps :
-![Image](https://github.com/loquils/CTFs-WriteUps/-/raw/main/404CTF/_Images/Général/scoretemps.png?ref_type=heads)
+![Image](https://github.com/loquils/CTFs-WriteUps/blob/main/404CTF/_Images/Général/scoretemps.png?ref_type=heads)
 
 ## Résolutions
 | Divers |
