@@ -9,18 +9,6 @@ Premier CTF pour moi, bonne expérience, et pleins de nouveaux sujets pour moi :
 ![Image](https://github.com/loquils/CTFs-WriteUps/blob/main/404CTF/_Images/Général/scoretemps.png?ref_type=heads)
 
 ## Résolutions
-<<<<<<< Updated upstream
-| Divers |
-|----------|:-------------:|------:|
-| Discord |  left-aligned | $1600 |
-| De la friture sur la ligne |    centered   |   $12 |
-| Bienvenue | right-aligned |    $1 |
-| Revers(ibl)e Engineering| right-aligned |    $1 |
-
-| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
-|:--------------|:-------------:|--------------:|
-| text-align left | text-align center | text-align right |
-=======
 _Pour information, les point correspondent au nombre de points que le challenge  vaut à la fin du CTF._
 
 | Divers | Points | Résolution |
@@ -142,4 +130,3 @@ _Pour information, les point correspondent au nombre de points que le challenge 
 | Du poison [2/2] | 352 | :x: |
 | Des portes dérobées | 891 | :x: |
 | Du poison [3/2] | 956 | :x: |
->>>>>>> Stashed changes
