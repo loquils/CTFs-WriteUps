@@ -15,3 +15,7 @@ Premier CTF pour moi, bonne expérience, et pleins de nouveaux sujets pour moi :
 | De la friture sur la ligne |    centered   |   $12 |
 | Bienvenue | right-aligned |    $1 |
 | Revers(ibl)e Engineering| right-aligned |    $1 |
+
+| Headline 1 in the tablehead | Headline 2 in the tablehead | Headline 3 in the tablehead |
+|:--------------|:-------------:|--------------:|
+| text-align left | text-align center | text-align right |
