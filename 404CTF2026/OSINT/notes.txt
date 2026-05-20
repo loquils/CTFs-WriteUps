@@ -1,0 +1,181 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OSINT
+Commune de Pfastatt
+Katia et Maurice Krafft, Catherine Marie Joséphine Conrad
+
+L'année de décès : 1991
+le mont où elle est décédée : Unzen
+son nom de famille : Conrad
+son jour de naissance : 17
+et le mois de naissance de son mari : 03
+
+404CTF{1991_Krafft_Conrad_17_03}
+
+
+
+Canular savant (1/3)
+404CTF{rond-point_des_champs-elysees_marcel-dassault} (nope)
+404CTF{rond-point_de_la_porte_de_saint-cloud} (nope)
+404CTF{place_de_la_concorde} (nope)
+
+404CTF{rond-point_des_champs-elysees} (nope)
+404CTF{rond-point_marcel-dassault} (nope)
+Le Rond‑Point des Champs‑Élysées (aussi appelé “Rond‑Point Marcel‑Dassault”)
+
+404CTF{carrefour-rond-point-des-champs-elysees-marcel-dassault}
+
+
+404CTF{carrefour-rond-point_des_champs-elysees_marcel-dassault} (nope)
+404CTF{carrefour-rond-point_des_champs-elysees} (nope)
+404CTF{carrefour-rond-point_marcel-dassault} (nope)
+
+404CTF{carrefour-rond-point_des_champs-elysees_marcel-dassault}
+404CTF{carrefour-rond-point_des_champs-elysees}
+404CTF{carrefour-rond-point_des_champs-elysees-marcel-dassault}
+
+404CTF{rond-point_des_champs-elysees_marcel-dassault}
+404CTF{rond-point_des_champs-elysees-marcel-dassault} OUI
+
+
+
+Doctor Es Langues
+Pierre Grosser ? 
+
+
+
+Canular savant (2/3)
+groupe de musique alternative originaire de Columbus = Twenty One Pilots
+Dans Morph, parle de Nicolas Bourbaki
+404CTF{bourbaki) OUI
+
+
+Metro OSINT Dodo  |  Format : 404CTF{les-halles_les-halles}
+Passant par Chatelet, Sur la ligne 4
+Qui colle : Réaumur => Raspail, mais 14mins
+404CTF{reaumur_raspail} | 404CTF{raspail_reaumur} (nope)
+
+RER B
+
+On test Jussieu => Réaumur : 404CTF{reaumur_jussieu} | 404CTF{jussieu_reaumur} (nope)
+
+
+D'apres copi, a tester : 
+Pasteur
+Pierre et Marie Curie
+Jussieu
+Corvisart
+Lamarck – Caulaincourt
+Réaumur – Sébastopol
+Censier – Daubenton
+(éventuellement Parmentier)
+
+
+Lignes qui passent par Châtelet
+Métro (à Châtelet)
+Ligne 1 nope
+Ligne 4     Raspail ça colle, avec Réaumur … faut tester avec Réaumur-Sébastropol ? : 404CTF{raspail_reaumur-sebastopol} | 404CTF{reaumur-sebastopol_raspail} (nope !)
+Ligne 7 nope
+Ligne 11 nope
+Ligne 14 nope
+RER (Châtelet‑Les Halles)
+RER A
+RER B
+
+
+
+
+
+
+
+
+
+Une aiguille dans une Île-de-France 
+
+"Jt'attends près de la ptite fontaine rectangulaire sur le trottoir en face du café. Oublie pas le kit crochetage !"
+
+https://cybdetective.com/osintmap/     A tester
+En python : https://www.geeksforgeeks.org/python/get-the-city-state-and-country-names-from-latitude-and-longitude-using-python/
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ANALYSE FORENSIC
+
+Exfiltration Kantik 1
+En analysant la capture, récupérez les informations suivantes: - IP de l'attaquant - IP du serveur victime de l'attaque - Version du serveur Apache sur le serveur - Numéro de la CVE exploitée pour prendre possession du serveur - Port cible du reverse shell que l'attaquant met en place sur le serveur
+Format du Flag : 404CTF{10.5.1.9_10.1.1.4_6.10.2_CVE-1999-12345_80} où les informations sont indiquées dans l'ordre demandé ci-dessus et séparées par des "_"
+
+Sur wireshark, on retrouve vers le paquet 131215 des paquets TCP/HTTP
+Les choses qui se passent la correspondent bien à ce qu'on trouve sur ce site : https://infosecwriteups.com/evading-detection-while-using-nmap-69633df091f3
+
+IP attaquant : 192.168.122.133
+IP serveur : 192.168.122.177
+Apache version : 2.4.66
+Numéro de la CVE : CVE-2025-66200 (nope ?) CVE-2025-58098 (nope), ca peut etre CVE‑2026‑23918
+Port cible du reverse shell : 34858 Le telnet tape tout le temps la ? 44024 ++ ?    Ca communique vers 34946 aussi, 43746 aussi, 43756 aussi          (On a du STP sur du 32769 et 68)
+
+On try : 
+404CTF{192.168.122.133_192.168.122.177_2.4.66_CVE-2025-66200_34858} (nope)
+404CTF{192.168.122.133_192.168.122.177_2.4.66_CVE-2025-58098_34858} (nope)
+
+404CTF{192.168.122.133_192.168.122.177_2.4.66_CVE-2025-58098_44024} (nope)
+404CTF{192.168.122.133_192.168.122.177_2.4.66_CVE-2025-66200_44024} (nope)
+
+Si on filtre sur Telnet, on trouve les données exfiltrées (fin, les commande réalisées en reverse shell je pense)
+
+404CTF{192.168.122.133_192.168.122.177_2.4.66_CVE‑2026‑23918_34858}
+
+
+
+Curieux SMS 
+1 : 404CTF{m4r13_
+2 : Rien trouvé  =>   cur13_ ?
+3 : table "part" => labo.jpg => data 62 => on renomme dans app_part la 62 en jpg = > r4d1um_
+3 : 1898}
+tr_ctf_001 ?
+ On test 404CTF{m4r13_r4d1um_1898} (nope) 404CTF{m4r13_cur13_r4d1um_1898} YES TA MERE
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXPLOITATION DE BINAIRES 
+
+Le bon ingrédient
+Il y a une entrée utilisateur dans "reponse[]", et ensuite un if sur la valeur de "ingredient" faut faire un buffer overflow je pense, pour reécrire la valeur de ingredient :)
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SECURITE WEB
+
+Wall Of Patents
+Je pense qu'il faut faire une SQL injection sur les méthodes read_key ou read_comment du bot
+
+
+
+
+
+
+
+
+
+
+
+GET /watch?v=dQw4w9WgXcQ&pp=ygUIcmlja3JvbGw%3D HTTP/1.1\r\n     <===  Rick Roll ?
+
+
+
+
+
+
+
+
