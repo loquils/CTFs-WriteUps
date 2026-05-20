@@ -14,7 +14,7 @@ _Pour information, les points correspondent au nombre de points que le challenge
 |:----------|:-------------:|------:|
 | Bienvenue | 1 | :heavy_check_mark: |
 | RGPD |  1 | :heavy_check_mark: |
-| 5 Ronisés | 100 | :x: |
+| 5 Ronisés | 100 | :heavy_check_mark: |
 | Michromatique | 100 | :x: |
 | Super enQuête Libre [1/4] | 100 | :x: |
 | Super enQuête Libre [2/4] | 100 | :x: |
